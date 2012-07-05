@@ -12,7 +12,7 @@ class NameList {
 		
 // create an array list 
 		//TODO read names from file
-			ArrayList pupil = new ArrayList(); 
+			ArrayList<String> pupil = new ArrayList<String>(); 
 
 // add elements to the array list 
 			
