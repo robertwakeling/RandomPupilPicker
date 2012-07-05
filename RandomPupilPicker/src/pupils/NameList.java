@@ -11,6 +11,7 @@ class NameList {
 	public static void main(String args[]) { 
 		
 // create an array list 
+		//TODO read names from file
 			ArrayList pupil = new ArrayList(); 
 
 // add elements to the array list 
