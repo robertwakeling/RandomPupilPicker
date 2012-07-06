@@ -1,6 +1,7 @@
 package pupils;
 
 
+import java.io.IOException;
 import java.util.*; 
 
 //Create arraylist with all pupils names in
@@ -8,7 +9,7 @@ import java.util.*;
 class NameList { 
 	
 	
-	public static void main(String args[]) { 
+	public static void main(String args[]) throws IOException { 
 		
 // create an array list 
 		//TODO read names from file
@@ -43,10 +44,14 @@ class NameList {
 			pupil.add("Billy");
 			pupil.add("Junior");
 			
-
+			System.out.println("Press enter to choose pupil");
+			System.in.read();
+			
 // display the array list 
 			System.out.println("Pupils left to choose from: \n" + pupil); 
 			
 
 	} 
+	
+	
 }
