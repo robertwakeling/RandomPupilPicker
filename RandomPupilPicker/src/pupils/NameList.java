@@ -50,6 +50,12 @@ class NameList {
 // display the array list 
 			System.out.println("Pupils left to choose from: \n" + pupil); 
 			
+		
+			//Random generator = new Random();
+			//int index = generator.nextInt ( pupil.size() );
+			String name = pupil.get( new Random().nextInt( pupil.size() ) );
+			
+			System.out.println(name);
 
 	} 
 	
