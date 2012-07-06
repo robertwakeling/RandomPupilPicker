@@ -53,7 +53,7 @@ class NameList {
 			//Pick a random name from the arraylist
 			int listSize1 = pupil.size();
 		while (listSize1 > 0) {
-			System.out.print("Press enter to choose pupil");
+			System.out.print("Press enter to choose pupil; ");
 			try {
 				System.in.read();
 			} catch (IOException e) {
@@ -70,6 +70,7 @@ class NameList {
 			System.out.println(listSize);
 			//TODO set up an escape from while loop
 			//TODO create method
+			//TODO create GUI
 	
 			
 		}
