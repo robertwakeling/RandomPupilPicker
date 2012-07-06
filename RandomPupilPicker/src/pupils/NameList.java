@@ -9,7 +9,7 @@ import java.util.*;
 class NameList { 
 	
 	
-	public static void main(String args[]) throws IOException { 
+	public static void main(String args[]) { 
 		
 // create an array list 
 		//TODO read names from file
@@ -44,18 +44,33 @@ class NameList {
 			pupil.add("Billy");
 			pupil.add("Junior");
 			
-			System.out.println("Press enter to choose pupil");
-			System.in.read();
+			
 			
 // display the array list 
-			System.out.println("Pupils left to choose from: \n" + pupil); 
+			//System.out.println("Pupils left to choose from: \n" + pupil); 
 			
 		
-			//Random generator = new Random();
-			//int index = generator.nextInt ( pupil.size() );
+			//Pick a random name from the arraylist
+			int listSize1 = pupil.size();
+		while (listSize1 > 0) {
+			System.out.print("Press enter to choose pupil");
+			try {
+				System.in.read();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			String name = pupil.get( new Random().nextInt( pupil.size() ) );
 			
 			System.out.println(name);
+			
+			pupil.remove(name);
+			pupil.trimToSize( );
+			int listSize = pupil.size();
+			System.out.println(listSize);
+	
+			
+		}
 
 	} 
 	
