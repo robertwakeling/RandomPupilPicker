@@ -68,6 +68,8 @@ class NameList {
 			pupil.trimToSize( );
 			int listSize = pupil.size();
 			System.out.println(listSize);
+			//TODO set up an escape from while loop
+			//TODO create method
 	
 			
 		}
