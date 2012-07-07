@@ -3,6 +3,7 @@ package pupils;
 
 import java.io.IOException;
 import java.util.*; 
+import javax.swing.*;//for GUI Components 
 
 //Create arraylist with all pupils names in
 
@@ -51,8 +52,8 @@ class NameList {
 			
 		
 			//Pick a random name from the arraylist
-			int listSize1 = pupil.size();
-		while (listSize1 > 0) {
+			int listSize = pupil.size();
+		while (listSize > 0) {
 			System.out.print("Press enter to choose pupil; ");
 			try {
 				System.in.read();
@@ -64,9 +65,11 @@ class NameList {
 			
 			System.out.println(name);
 			
+			//JOptionPane.showMessageDialog(null, name);
+			
 			pupil.remove(name);
 			pupil.trimToSize( );
-			int listSize = pupil.size();
+			listSize = pupil.size();
 			System.out.println(listSize);
 			//TODO set up an escape from while loop
 			//TODO create method
