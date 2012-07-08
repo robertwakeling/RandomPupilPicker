@@ -1,9 +1,12 @@
 package pupils;
 
 
+import java.awt.Color;
+import java.awt.FlowLayout;
 import java.io.IOException;
 import java.util.*; 
 import javax.swing.*;//for GUI Components 
+import javax.swing.plaf.LabelUI;
 
 //Create arraylist with all pupils names in
 
@@ -18,6 +21,17 @@ class NameList {
 		
 			//Pick a random name from the arraylist
 			int listSize = pupil.size();
+			JFrame frame = new JFrame();
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			//frame.setSize(new Dimension(300, 100));
+			frame.setTitle("Name Picker");
+			frame.setLayout(new FlowLayout());
+			
+			JButton button1 = new JButton();
+			button1.setText("Random");
+			button1.setBackground(Color.RED);
+			frame.add(button1);
+			
 		while (listSize >= 0) {
 			System.out.println("Pupils left to choose from: \n" + pupil); 
 			System.out.print("Press enter to choose pupil; ");
@@ -29,6 +43,12 @@ class NameList {
 			String name = pupil.get( new Random().nextInt( pupil.size() ) );
 			
 			System.out.println(name);
+			JLabel label = new JLabel();
+			
+			frame.add(label);
+			frame.pack();
+			frame.setVisible(true);
+		
 			
 			//JOptionPane.showMessageDialog(null, name);
 			
@@ -88,9 +108,25 @@ class NameList {
 		return pupil;
 		
 	}
+
+	
+/*public static void frame() {
+	JFrame frame = new JFrame();
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//frame.setSize(new Dimension(300, 100));
+	frame.setTitle("Name Picker");
+	frame.setLayout(new FlowLayout());
+	
+	JButton button1 = new JButton();
+	button1.setText("Random Name:");
+	button1.setBackground(Color.RED);
+	frame.add(button1);
+	JLabel label = new JLabel();
+	frame.add(label);
+	frame.pack();
+	frame.setVisible(true);
+
+}*/
+	
 }
-	
-	
-	
-	
 	
