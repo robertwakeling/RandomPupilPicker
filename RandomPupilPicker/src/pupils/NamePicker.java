@@ -7,14 +7,13 @@ import java.io.IOException;
 import java.util.*; //Random number and such
 import javax.swing.*;//for GUI Components 
 
-//Create arraylist with all pupils names in
 
-class NameList { 
+class NamePicker { 
 	public static void main(String args[]) { 
 
 		ArrayList<String> pupil = getNames(); //set up arraylist
 		
-	//Pick a random name from the arraylist
+//Pick a random name from the arraylist
 		int listSize = pupil.size();
 		
 		while (listSize >= 0) {
@@ -26,8 +25,8 @@ class NameList {
 			}
 			
 			String name = pupil.get(new Random().nextInt(pupil.size()));
-			
-			System.out.println(name);
+	
+			System.out.println(name);//outputs name
 			resultFrame(name);
 			
 			pupil.remove(name);
