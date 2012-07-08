@@ -47,13 +47,11 @@ class NameList {
 			
 			
 			
-// display the array list 
-			//System.out.println("Pupils left to choose from: \n" + pupil); 
-			
 		
 			//Pick a random name from the arraylist
 			int listSize = pupil.size();
 		while (listSize > 0) {
+			System.out.println("Pupils left to choose from: \n" + pupil); 
 			System.out.print("Press enter to choose pupil; ");
 			try {
 				System.in.read();
@@ -70,15 +68,11 @@ class NameList {
 			pupil.remove(name);
 			pupil.trimToSize( );
 			listSize = pupil.size();
-			System.out.println(listSize);
+			
 			//TODO set up an escape from while loop
 			//TODO create method
-			//TODO create GUI
-	
-			
-		}
-
+			//TODO create GUI	
+		}	
+		
 	} 
-	
-	
 }
