@@ -12,41 +12,9 @@ class NameList {
 	
 	public static void main(String args[]) { 
 		
-// create an array list 
-		//TODO read names from file
-			ArrayList<String> pupil = new ArrayList<String>(); 
 
-// add elements to the array list 
-			
-			pupil.add("Bethany"); 
-			pupil.add("Mahalah"); 
-			pupil.add("Paige"); 
-			pupil.add("Finley"); 
-			pupil.add("Skye"); 
-			pupil.add("Tayla"); 
-			pupil.add("Archie");
-			pupil.add("Harley");
-			pupil.add("Declan");
-			pupil.add("Sam");
-			pupil.add("Joseph");
-			pupil.add("Molly");
-			pupil.add("Lillie");
-			pupil.add("Vera-Lee");
-			pupil.add("Mitchell");
-			pupil.add("Joshua");
-			pupil.add("Millissa");
-			pupil.add("Vinnie");
-			pupil.add("Henry");
-			pupil.add("Elijah");
-			pupil.add("Toby");
-			pupil.add("Isabella");
-			pupil.add("Lillyann");
-			pupil.add("Aoife");
-			pupil.add("Billy");
-			pupil.add("Junior");
-			
-			
-			
+	
+	ArrayList<String> pupil = getNames();
 		
 			//Pick a random name from the arraylist
 			int listSize = pupil.size();
@@ -70,32 +38,8 @@ class NameList {
 		
 			if (listSize == 0)
 			{
-				pupil.add("Bethany"); 
-				pupil.add("Mahalah"); 
-				pupil.add("Paige"); 
-				pupil.add("Finley"); 
-				pupil.add("Skye"); 
-				pupil.add("Tayla"); 
-				pupil.add("Archie");
-				pupil.add("Harley");
-				pupil.add("Declan");
-				pupil.add("Sam");
-				pupil.add("Joseph");
-				pupil.add("Molly");
-				pupil.add("Lillie");
-				pupil.add("Vera-Lee");
-				pupil.add("Mitchell");
-				pupil.add("Joshua");
-				pupil.add("Millissa");
-				pupil.add("Vinnie");
-				pupil.add("Henry");
-				pupil.add("Elijah");
-				pupil.add("Toby");
-				pupil.add("Isabella");
-				pupil.add("Lillyann");
-				pupil.add("Aoife");
-				pupil.add("Billy");
-				pupil.add("Junior");
+				ArrayList<String> next = getNames();
+				pupil = next;
 			}
 			
 			//TODO set up an escape from while loop
@@ -121,7 +65,7 @@ class NameList {
 					pupil.add("Tayla"); 
 					pupil.add("Archie");
 					pupil.add("Harley");
-					pupil.add("Declan");
+			/*		pupil.add("Declan");
 					pupil.add("Sam");
 					pupil.add("Joseph");
 					pupil.add("Molly");
@@ -138,7 +82,7 @@ class NameList {
 					pupil.add("Lillyann");
 					pupil.add("Aoife");
 					pupil.add("Billy");
-					pupil.add("Junior");
+					pupil.add("Junior");*/
 					
 					
 		return pupil;
