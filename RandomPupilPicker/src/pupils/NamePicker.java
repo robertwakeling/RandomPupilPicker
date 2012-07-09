@@ -23,12 +23,12 @@ class NamePicker {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			
+			//TODO Put name getting into own method
 			String name = pupil.get(new Random().nextInt(pupil.size()));
 	
 			System.out.println(name);//outputs name
 			resultFrame(name);
-			
+			//TODO put name remover into own method
 			pupil.remove(name);
 			pupil.trimToSize( );
 			listSize = pupil.size();
@@ -39,9 +39,6 @@ class NamePicker {
 				pupil = next;
 			}
 			
-			//TODO set up an escape from while loop
-			//TODO create GUI	
-			//TODO multiple names
 		}	
 		
 	} 
