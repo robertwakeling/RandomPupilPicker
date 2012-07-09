@@ -96,7 +96,9 @@ class NamePicker {
 		frame.add(button1);
 		JLabel label = new JLabel();
 		label.setText(pupil);
-	
+	}
+	//TODO sort out frame
+	public NamePicker(String pupilName) {
 		frame.add(label);
 		frame.pack();
 		frame.setVisible(true);
