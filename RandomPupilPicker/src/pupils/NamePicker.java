@@ -9,7 +9,7 @@ import javax.swing.*;//for GUI Components
 
 
 class NamePicker { 
-	public static void main(String args[]) { 
+	public static void main(String args[], Object name) { 
 
 		ArrayList<String> pupil = getNames(); //set up arraylist
 		
@@ -24,19 +24,20 @@ class NamePicker {
 				e.printStackTrace();
 			}
 			
-			String name = pupil.get(new Random().nextInt(pupil.size()));
+			String name1 = pupil.get(new Random().nextInt(pupil.size()));
 	
-			System.out.println(name);//outputs name
-			resultFrame(name);
-			
-			pupil.remove(name);
+			System.out.println(name1);//outputs name
+			//resultFrame(name);
+		
+	
+			pupil.remove(name1);
 			pupil.trimToSize( );
 			listSize = pupil.size();
 		
 			if (listSize == 0)
 			{
-				ArrayList<String> next = getNames();
-				pupil = next;
+				ArrayList<String> reset = getNames();
+				pupil = reset;
 			}
 			
 			//TODO set up an escape from while loop
@@ -84,7 +85,7 @@ class NamePicker {
 		return pupil;	
 		}
 	
-	public static void resultFrame(String pupil) {
+/*	public static void resultFrame(String pupil) {
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Name Picker");
@@ -96,12 +97,10 @@ class NamePicker {
 		frame.add(button1);
 		JLabel label = new JLabel();
 		label.setText(pupil);
-	}
-	//TODO sort out frame
-	public NamePicker(String pupilName) {
+	
 		frame.add(label);
 		frame.pack();
 		frame.setVisible(true);
-		}
+		}*/
 }
 	
