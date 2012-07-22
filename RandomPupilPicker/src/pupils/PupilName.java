@@ -15,7 +15,7 @@ public class PupilName {
 	public static void main(String[] args) {
 	PupilName pupil1 = new PupilName("Leon");
 	//pupil1.beenPicked();
-	Boolean a = pupil1.picked;
+	String a = pupil1.name;
 	System.out.println(a);
 	}
 }
