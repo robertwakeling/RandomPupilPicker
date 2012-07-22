@@ -1,15 +1,14 @@
 package pupils;
 
 
-import java.awt.Color; //for GUI 
-import java.awt.FlowLayout;//for GUI
 import java.io.IOException;
+import java.awt.event.*;
 import java.util.*; //Random number and such
 import javax.swing.*;//for GUI Components 
 
 
 class NamePicker { 
-	public static void main(String args[], Object name) { 
+	public static void RanNam() { 
 
 		ArrayList<String> pupil = getNames(); //set up arraylist
 		
