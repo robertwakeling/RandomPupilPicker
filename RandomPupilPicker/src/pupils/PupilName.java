@@ -34,6 +34,19 @@ public class PupilName {
 	}
 	public static void main(String[] args) {
 		
+		PupilName[] pupilNames = namesArrayMaker();
+	
+
+	PupilName choosenOne = PupilName.get(pupilNames);
+	choosenOne.beenPicked();
+	choosenOne.printName();
+	
+}
+
+	/**
+	 * @return
+	 */
+	private static PupilName[] namesArrayMaker() {
 		PupilName bethany = new PupilName("Bethany"); 
 		PupilName mahalah = new PupilName("Mahalah"); 
 		PupilName paige = new PupilName("Paige"); 
@@ -65,13 +78,8 @@ public class PupilName {
 			archie, harley, declan, sam, joseph, molly, lillie, veralee, mitchell,
 			joshua, millissa, vinnie, henry, elijah, toby, isabella, lillyann, aoife, 
 			billy, junior};
-	
-
-	PupilName choosenOne = PupilName.get(pupilNames);
-	choosenOne.beenPicked();
-	choosenOne.printName();
-	
-}
+		return pupilNames;
+	}
 
 
 }
