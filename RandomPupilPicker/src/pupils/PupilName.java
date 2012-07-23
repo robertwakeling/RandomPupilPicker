@@ -66,11 +66,12 @@ public class PupilName {
 			joshua, millissa, vinnie, henry, elijah, toby, isabella, lillyann, aoife, 
 			billy, junior};
 	
+
 	PupilName choosenOne = PupilName.get(pupilNames);
 	choosenOne.beenPicked();
 	choosenOne.printName();
 	
-	}
+}
 
 
 }
