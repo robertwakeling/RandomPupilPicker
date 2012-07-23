@@ -12,6 +12,10 @@ public class PupilName {
 
 	public void beenPicked() {
 		picked = true;
+	}
+	
+	void printName() {
+		System.out.println(ranpup.name);
 		
 	}
 	public static void main(String[] args) {
@@ -48,13 +52,9 @@ public class PupilName {
 			joshua, millissa, vinnie, henry, elijah, toby, isabella, lillyann, aoife, 
 			billy, junior};
 	//pupil1.beenPicked();
-	int name = PupilName.get(new Random().nextInt(pupilNames.length));
-	PupilName ranPupil = pupilNames[name];
-	System.out.println(ranPupil);
+	PupilName[] name = pupilNames;
+	name.printName();
 	}
 
-	private static int get(int i) {
-		// TODO Auto-generated method stub
-		return i;
-	}
+
 }
