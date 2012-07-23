@@ -13,9 +13,12 @@ public class PupilName {
 		
 	}
 	public static void main(String[] args) {
-	PupilName pupil1 = new PupilName("Leon");
+	PupilName leon = new PupilName("Leon");
+	PupilName ted = new PupilName("Ted");
+	PupilName zofja = new PupilName("Zofja");
+	PupilName[] pupilNames = {leon, ted, zofja};
 	//pupil1.beenPicked();
-	String a = pupil1.name;
-	System.out.println(a);
+	String a = leon.name;
+	System.out.println(pupilNames.length);
 	}
 }
