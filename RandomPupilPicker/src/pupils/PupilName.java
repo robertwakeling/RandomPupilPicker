@@ -2,27 +2,33 @@ package pupils;
 
 import java.util.Random;
 
+// Pupil class attributes
 public class PupilName {
 	private String name;
-	private boolean picked = false;
+	private boolean pickedToAnswer = false;
+	private boolean pickedForGroup = false;
 	
-	private static class pickRand {
-	    public static PupilName get (PupilName[] pupilNames) {
-	    	Random generator = new Random();
-			int rnd = generator.nextInt(pupilNames.length);
-	        return pupilNames[rnd];
+	//Method to pick a random element from pupilNames array
+	public static PupilName get (PupilName[] pupilNames) {
+	    Random generator = new Random();
+		int rnd = generator.nextInt(pupilNames.length);
+		return pupilNames[rnd];
 	    }
-	}
 	
+	//pupil constructor
 	public PupilName(String pupil) {
 		name = pupil;
 	}
-
+	
+	//method to change picked to answer a question to true
 	public void beenPicked() {
-		picked = true;
+		pickedToAnswer = true;
 	}
 	
+	//Method to print state of pupils name
 	void printName() {
+		System.out.println("Picked to answer question? " + pickedToAnswer);
+		System.out.println("Picked to be in a group? " + pickedForGroup);
 		System.out.println(name);
 		
 	}
@@ -60,8 +66,10 @@ public class PupilName {
 			joshua, millissa, vinnie, henry, elijah, toby, isabella, lillyann, aoife, 
 			billy, junior};
 	
-	PupilName ret = pickRand.get(pupilNames);
-	ret.printName();
+	PupilName choosenOne = PupilName.get(pupilNames);
+	choosenOne.beenPicked();
+	choosenOne.printName();
+	
 	}
 
 
