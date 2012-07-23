@@ -1,5 +1,7 @@
 package pupils;
 
+import java.util.Random;
+
 public class PupilName {
 	private String name;
 	private boolean picked = false;
@@ -46,7 +48,13 @@ public class PupilName {
 			joshua, millissa, vinnie, henry, elijah, toby, isabella, lillyann, aoife, 
 			billy, junior};
 	//pupil1.beenPicked();
-	String a = aoife.name;
-	System.out.println(a);
+	int name = PupilName.get(new Random().nextInt(pupilNames.length));
+	PupilName ranPupil = pupilNames[name];
+	System.out.println(ranPupil);
+	}
+
+	private static int get(int i) {
+		// TODO Auto-generated method stub
+		return i;
 	}
 }
