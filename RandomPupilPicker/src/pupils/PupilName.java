@@ -6,6 +6,14 @@ public class PupilName {
 	private String name;
 	private boolean picked = false;
 	
+	private static class pickRand {
+	    public static PupilName get (PupilName[] pupilNames) {
+	    	Random generator = new Random();
+			int rnd = generator.nextInt(pupilNames.length);
+	        return pupilNames[rnd];
+	    }
+	}
+	
 	public PupilName(String pupil) {
 		name = pupil;
 	}
@@ -15,7 +23,7 @@ public class PupilName {
 	}
 	
 	void printName() {
-		System.out.println(ranpup.name);
+		System.out.println(name);
 		
 	}
 	public static void main(String[] args) {
@@ -51,9 +59,9 @@ public class PupilName {
 			archie, harley, declan, sam, joseph, molly, lillie, veralee, mitchell,
 			joshua, millissa, vinnie, henry, elijah, toby, isabella, lillyann, aoife, 
 			billy, junior};
-	//pupil1.beenPicked();
-	PupilName[] name = pupilNames;
-	name.printName();
+	
+	PupilName ret = pickRand.get(pupilNames);
+	ret.printName();
 	}
 
 
