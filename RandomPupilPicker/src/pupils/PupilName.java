@@ -2,6 +2,8 @@ package pupils;
 
 import java.util.Random;
 
+// is this thing on??
+
 // Pupil class attributes
 public class PupilName {
 	private String name;
