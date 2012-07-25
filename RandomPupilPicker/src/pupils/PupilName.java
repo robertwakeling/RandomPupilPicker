@@ -1,5 +1,5 @@
 package pupils;
-
+import pupils.Age;
 import java.util.Random;
 
 // Pupil class attributes
@@ -40,7 +40,7 @@ public class PupilName {
 	PupilName choosenOne = PupilName.get(pupilNames);
 	choosenOne.beenPicked();
 	choosenOne.printName();
-	
+	Age.findAge("2005-11-02");
 }
 
 	/**
