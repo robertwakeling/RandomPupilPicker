@@ -2,7 +2,8 @@ package pupils;
 
 import java.util.*;
 import java.io.*;
-
+//Alternative way of getting age
+//TODO re arrange code to except parameters
 public class AgeCalculation{
 	public static void main(String[] args) throws IOException{
 		int day = 1, month = 0, year = 1, ageYears, ageMonths, ageDays;
