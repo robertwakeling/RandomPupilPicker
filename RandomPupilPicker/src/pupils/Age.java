@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 
 public class Age {
 
-	static void findAge(String dob) {
+	static int findAge(String dob) {
 		//TAKE SUBSTRINGS OF THE DOB SO SPLIT OUT YEAR, MONTH AND DAY
 		//INTO SEPERATE VARIABLES
 		int yearDOB = Integer.parseInt(dob.substring(0, 4));
@@ -49,7 +49,8 @@ public class Age {
 
 		//THE AGE VARIBALE WILL NOW CONTAIN THE CORRECT AGE
 		//DERIVED FROMTHE GIVEN DOB
-		System.out.println(age);
+		//System.out.println(age);
+		return age;
 
 	}
 

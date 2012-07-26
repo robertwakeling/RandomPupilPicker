@@ -5,7 +5,7 @@ import java.util.Random;
 // Pupil class attributes
 public class PupilName {
 	private String name;
-	private static String dob;
+	private String dob;
 	private boolean pickedToAnswer = false;
 	private boolean pickedForGroup = false;
 	
@@ -31,7 +31,7 @@ public class PupilName {
 	void printName() {
 		System.out.println("Picked to answer question? " + pickedToAnswer);
 		System.out.println("Picked to be in a group? " + pickedForGroup);
-		System.out.print(name);
+		System.out.print(name+" ");
 		
 	}
 	public static void main(String[] args) {
@@ -42,7 +42,8 @@ public class PupilName {
 	PupilName choosenOne = PupilName.get(pupilNames);
 	choosenOne.beenPicked();
 	choosenOne.printName();
-	Age.findAge(dob);
+	int age = Age.findAge(choosenOne.dob);
+	System.out.print(age);
 }
 
 	/**
