@@ -8,7 +8,7 @@ import java.util.Random;
 public class PupilName {
 	private String name;
 	private String dob;
-	private static boolean pickedToAnswer = false;
+	private boolean pickedToAnswer = false;
 	private boolean pickedForGroup = false;
 	
 	
@@ -30,7 +30,7 @@ public class PupilName {
 		pickedToAnswer = true;
 	}
 	//Re-sets beenPicked to false for whole class
-	public static void resetBeenPicked() {
+	public  void resetBeenPicked() {
 			pickedToAnswer = false;
 		}
 	
@@ -48,19 +48,20 @@ public class PupilName {
 	
 	for (int i = 0; i < pupilNames.length; i++) {
 		PupilName choosenOne = PupilName.get(pupilNames);
-		if (PupilName.pickedToAnswer == false) {
+		if (choosenOne.pickedToAnswer == false) {
 			choosenOne.beenPicked();
 			choosenOne.printName();
 			int age = Age.findAge(choosenOne.dob);
 			System.out.println(age);
+		}
 			System.in.read();
-		} 
+		 
 	
 	}
 	//for (int i = 0; i < pupilNames.length; i++) {
 	//	PupilName.resetBeenPicked();
 	//}
-	
+	System.out.print("end");
 }
 
 	/**
