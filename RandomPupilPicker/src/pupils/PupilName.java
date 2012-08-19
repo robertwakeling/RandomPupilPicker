@@ -55,18 +55,22 @@ public class PupilName {
 			choosenOne.printName();
 			int age = Age.findAge(choosenOne.dob);
 			System.out.println(age);
-		}
+			System.out.print(pupilNames.length);
+		
+		 System.out.print(choosenOne.pickedToAnswer);
+		 System.out.print(i);
 			System.in.read();
-		 
+		if(choosenOne.pickedToAnswer == true) {
+			PupilName.get(pupilNames);
+		}
+		
+	}
+		//TODO find out how to exit upon user click
 	
 	}
-	for (int i = 0; i < pupilNames.length; i++) {
-	PupilName toBeReset = pupilNames[i];
-		toBeReset.resetBeenPicked();
-	}
-	System.out.print("end");
-}
 
+
+	}
 	/**
 	 * @return
 	 */
