@@ -30,7 +30,7 @@ public class PupilName {
 		pickedToAnswer = true;
 	}
 	//Re-sets beenPicked to false for whole class
-	public  void resetBeenPicked() {
+	public void resetBeenPicked() {
 			pickedToAnswer = false;
 		}
 	
@@ -58,15 +58,17 @@ public class PupilName {
 		 
 	
 	}
-	//for (int i = 0; i < pupilNames.length; i++) {
-	//	PupilName.resetBeenPicked();
-	//}
+	for (int i = 0; i < pupilNames.length; i++) {
+	PupilName toBeReset = pupilNames[i];
+		toBeReset.resetBeenPicked();
+	}
 	System.out.print("end");
 }
 
 	/**
 	 * @return
 	 */
+	//TODO Read names from a file
 	private static PupilName[] namesArrayMaker() {
 		PupilName bethany = new PupilName("Bethany", "2005-11-05"); 
 		PupilName mahalah = new PupilName("Mahalah", "2006-06-04"); 
