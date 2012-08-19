@@ -1,13 +1,16 @@
 package pupils;
 import pupils.Age;
+
+import java.io.IOException;
 import java.util.Random;
 
 // Pupil class attributes
 public class PupilName {
 	private String name;
 	private String dob;
-	private boolean pickedToAnswer = false;
+	private static boolean pickedToAnswer = false;
 	private boolean pickedForGroup = false;
+	
 	
 	//Method to pick a random element from pupilNames array
 	public static PupilName get (PupilName[] pupilNames) {
@@ -26,6 +29,11 @@ public class PupilName {
 	public void beenPicked() {
 		pickedToAnswer = true;
 	}
+	//Re-sets beenPicked to false for whole class
+	public static void resetBeenPicked() {
+			pickedToAnswer = false;
+		}
+	
 	
 	//Method to print state of pupils name
 	void printName() {
@@ -34,16 +42,25 @@ public class PupilName {
 		System.out.print(name+" ");
 		
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		PupilName[] pupilNames = namesArrayMaker();
 	
-
-	PupilName choosenOne = PupilName.get(pupilNames);
-	choosenOne.beenPicked();
-	choosenOne.printName();
-	int age = Age.findAge(choosenOne.dob);
-	System.out.print(age);
+	for (int i = 0; i < pupilNames.length; i++) {
+		PupilName choosenOne = PupilName.get(pupilNames);
+		if (PupilName.pickedToAnswer == false) {
+			choosenOne.beenPicked();
+			choosenOne.printName();
+			int age = Age.findAge(choosenOne.dob);
+			System.out.println(age);
+			System.in.read();
+		} 
+	
+	}
+	//for (int i = 0; i < pupilNames.length; i++) {
+	//	PupilName.resetBeenPicked();
+	//}
+	
 }
 
 	/**
@@ -71,7 +88,7 @@ public class PupilName {
 		PupilName henry = new PupilName("Henry", "2008-04-23");
 		PupilName elijah = new PupilName("Elijah", "2008-05-08");
 		PupilName toby = new PupilName("Toby", "2008-06-03");
-		PupilName isabella = new PupilName("Isabella", "208-06-07");
+		PupilName isabella = new PupilName("Isabella", "2008-06-07");
 		PupilName lillyann = new PupilName("Lillyann", "2008-06-09");
 		PupilName aoife = new PupilName("Aoife", "2008-06-09");
 		PupilName billy = new PupilName("Billy", "2008-06-11");
