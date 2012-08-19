@@ -1,5 +1,7 @@
 package pupils;
+import pupils.Age;
 
+import java.io.IOException;
 import java.util.Random;
 
 // is this thing on??
@@ -7,8 +9,10 @@ import java.util.Random;
 // Pupil class attributes
 public class PupilName {
 	private String name;
+	private String dob;
 	private boolean pickedToAnswer = false;
 	private boolean pickedForGroup = false;
+	
 	
 	//Method to pick a random element from pupilNames array
 	public static PupilName get (PupilName[] pupilNames) {
@@ -18,62 +22,89 @@ public class PupilName {
 	    }
 	
 	//pupil constructor
-	public PupilName(String pupil) {
+	public PupilName(String pupil, String birthday) {
 		name = pupil;
+		dob = birthday;
 	}
 	
 	//method to change picked to answer a question to true
 	public void beenPicked() {
 		pickedToAnswer = true;
 	}
+	//Re-sets beenPicked to false for whole class
+	public void resetBeenPicked() {
+			pickedToAnswer = false;
+		}
+	
 	
 	//Method to print state of pupils name
 	void printName() {
 		System.out.println("Picked to answer question? " + pickedToAnswer);
 		System.out.println("Picked to be in a group? " + pickedForGroup);
-		System.out.println(name);
+		System.out.print(name+" ");
 		
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		PupilName bethany = new PupilName("Bethany"); 
-		PupilName mahalah = new PupilName("Mahalah"); 
-		PupilName paige = new PupilName("Paige"); 
-		PupilName finley = new PupilName("Finley"); 
-		PupilName skye = new PupilName("Skye"); 
-		PupilName tayla = new PupilName("Tayla"); 
-		PupilName archie = new PupilName("Archie");
-		PupilName harley = new PupilName("Harley");
-		PupilName declan = new PupilName("Declan");
-		PupilName sam = new PupilName("Sam");
-		PupilName joseph = new PupilName("Joseph");
-		PupilName molly = new PupilName("Molly");
-		PupilName lillie = new PupilName("Lillie");
-		PupilName veralee = new PupilName("Vera-Lee");
-		PupilName mitchell = new PupilName("Mitchell");
-		PupilName joshua = new PupilName("Joshua");
-		PupilName millissa = new PupilName("Millissa");
-		PupilName vinnie = new PupilName("Vinnie");
-		PupilName henry = new PupilName("Henry");
-		PupilName elijah = new PupilName("Elijah");
-		PupilName toby = new PupilName("Toby");
-		PupilName isabella = new PupilName("Isabella");
-		PupilName lillyann = new PupilName("Lillyann");
-		PupilName aoife = new PupilName("Aoife");
-		PupilName billy = new PupilName("Billy");
-		PupilName junior = new PupilName("Junior");
+		PupilName[] pupilNames = namesArrayMaker();
+	
+	for (int i = 0; i < pupilNames.length; i++) {
+		PupilName choosenOne = PupilName.get(pupilNames);
+		if (choosenOne.pickedToAnswer == false) {
+			choosenOne.beenPicked();
+			choosenOne.printName();
+			int age = Age.findAge(choosenOne.dob);
+			System.out.println(age);
+		}
+			System.in.read();
+		 
+	
+	}
+	for (int i = 0; i < pupilNames.length; i++) {
+	PupilName toBeReset = pupilNames[i];
+		toBeReset.resetBeenPicked();
+	}
+	System.out.print("end");
+}
+
+	/**
+	 * @return
+	 */
+	//TODO Read names from a file
+	private static PupilName[] namesArrayMaker() {
+		PupilName bethany = new PupilName("Bethany", "2005-11-05"); 
+		PupilName mahalah = new PupilName("Mahalah", "2006-06-04"); 
+		PupilName paige = new PupilName("Paige", "2006-08-22"); 
+		PupilName finley = new PupilName("Finley", "2006-09-05"); 
+		PupilName skye = new PupilName("Skye", "2006-12-06"); 
+		PupilName tayla = new PupilName("Tayla", "2007-01-05"); 
+		PupilName archie = new PupilName("Archie", "2007-01-05");
+		PupilName harley = new PupilName("Harley", "2007-01-26");
+		PupilName declan = new PupilName("Declan", "2007-01-29");
+		PupilName sam = new PupilName("Sam", "2007-02-19");
+		PupilName joseph = new PupilName("Joseph", "2007-02-22");
+		PupilName molly = new PupilName("Molly", "2007-04-11");
+		PupilName lillie = new PupilName("Lillie", "2007-05-15");
+		PupilName veralee = new PupilName("Vera-Lee", "2007-06-03");
+		PupilName mitchell = new PupilName("Mitchell", "2007-12-02");
+		PupilName joshua = new PupilName("Joshua", "2007-12-07");
+		PupilName millissa = new PupilName("Millissa", "2008-01-31");
+		PupilName vinnie = new PupilName("Vinnie", "2008-01-31");
+		PupilName henry = new PupilName("Henry", "2008-04-23");
+		PupilName elijah = new PupilName("Elijah", "2008-05-08");
+		PupilName toby = new PupilName("Toby", "2008-06-03");
+		PupilName isabella = new PupilName("Isabella", "2008-06-07");
+		PupilName lillyann = new PupilName("Lillyann", "2008-06-09");
+		PupilName aoife = new PupilName("Aoife", "2008-06-09");
+		PupilName billy = new PupilName("Billy", "2008-06-11");
+		PupilName junior = new PupilName("Junior", "2008-08-27");
 	
 	PupilName[] pupilNames = {bethany, mahalah, paige, finley, skye, tayla, 
 			archie, harley, declan, sam, joseph, molly, lillie, veralee, mitchell,
 			joshua, millissa, vinnie, henry, elijah, toby, isabella, lillyann, aoife, 
 			billy, junior};
-	
-
-	PupilName choosenOne = PupilName.get(pupilNames);
-	choosenOne.beenPicked();
-	choosenOne.printName();
-	
-}
+		return pupilNames;
+	}
 
 
 }
